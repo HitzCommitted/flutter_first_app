@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/styled_text.dart';
 
-var startAlignment = Alignment.topRight;
-var endAlignment = Alignment.bottomLeft;
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -10,9 +10,9 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: const [
+          colors: [
             Color.fromARGB(255, 2, 63, 80),
             Color.fromARGB(255, 12, 73, 90),
           ],
@@ -21,7 +21,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: StyledText(),
+        child: StyledText('Welcome to Coding With Hitz'),
       ),
     );
   }
